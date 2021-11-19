@@ -13,18 +13,30 @@ import testReviewHarvester as tRH
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 def SA():
-    sia = SentimentIntensityAnalyzer()
-    df1 = tRH.ReviewHarvester()
-    #print(df1['Reviews'])
+    new_words = {'running hot': -3.0,}
 
-    #data['Reviews'] = data['Reviews'].astype(str)
+    sia = SentimentIntensityAnalyzer()
+    sia.lexicon.update(new_words)
+    df1 = tRH.ReviewHarvester()
     df2 = df1['Reviews']
 
 
     df1['Compound'] = [sia.polarity_scores(x)['compound'] for x in df2]
-    df1['Why0neg'] = [sia.polarity_scores(x)['neg'] for x in df2]
-    df1['Why0neu'] = [sia.polarity_scores(x)['neu'] for x in df2]
-    df1['Why0pos'] = [sia.polarity_scores(x)['pos'] for x in df2]
+    df1['Neg'] = [sia.polarity_scores(x)['neg'] for x in df2]
+    df1['Neu'] = [sia.polarity_scores(x)['neu'] for x in df2]
+    df1['Pos'] = [sia.polarity_scores(x)['pos'] for x in df2]
     print(df1)
+    
+    CompoundAvg = pd.DataFrame.mean(df1['Compound'])
+    NegAvg = pd.DataFrame.mean(df1['Neg'])
+    NeuAvg = pd.DataFrame.mean(df1['Neu'])
+    PosAvg = pd.DataFrame.mean(df1['Pos'])
+
+    print(CompoundAvg)
+    
     return(df1)
+
+if __name__ == '__main__':
+    sys.exit(main())
+
 SA()
