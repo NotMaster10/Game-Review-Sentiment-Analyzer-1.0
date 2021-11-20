@@ -1,0 +1,23 @@
+from flask import Flask, render_template, request
+#import SentimentAnalyzer
+
+
+app = Flask(__name__)
+
+@app.route("/")
+@app.route("/home")
+def home():
+   return render_template("index.html")
+   
+@app.route("/result", methods = ['POST'])
+def result():
+    output = request.form['url']
+    #url = output('url')
+    return(output)
+    
+@app.route('/')
+def dynamic_page():
+    return render_template("index.html")
+    
+if __name__ == '__main__':
+   app.run(debug = True,port=5001)
