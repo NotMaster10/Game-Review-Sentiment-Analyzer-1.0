@@ -13,9 +13,9 @@
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
-<li> <a href = "Home"> Home </a> </li>
-<li> <a href = "About"> About </a> </li>
-<li> <a href = "Help"> Help </a> </li>
+<li> <a href = "home"> Home </a> </li>
+<li> <a href = "about"> About </a> </li>
+<li> <a href = "help"> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
 <li>         <form method="POST" class="form" action = "/result">
              <label for ="URL">Enter Game URL:</label>

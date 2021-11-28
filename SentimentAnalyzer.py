@@ -26,13 +26,8 @@ def SA(GID):
     df1['Neu'] = [sia.polarity_scores(x)['neu'] for x in df2]
     df1['Pos'] = [sia.polarity_scores(x)['pos'] for x in df2]
     #print(df1)
-    
-    CompoundAvg = pd.DataFrame.mean(df1['Compound'])
-    NegAvg = pd.DataFrame.mean(df1['Neg'])
-    NeuAvg = pd.DataFrame.mean(df1['Neu'])
-    PosAvg = pd.DataFrame.mean(df1['Pos'])
 
-    return(df1, CompoundAvg)
+    return(df1)
     
     #return(df1)
 
