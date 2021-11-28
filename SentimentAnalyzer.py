@@ -6,18 +6,18 @@ Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for
 Sentiment Analysis of Social Media Text. Eighth International Conference on
 Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
 """
-import nltk
-import nltk.data
+#import nltk
+#import nltk.data
 import pandas as pd
-import testReviewHarvester as tRH
+import ReviewHarvester as RH
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-def SA():
+def SA(GID):
     new_words = {'running hot': -3.0,}
 
     sia = SentimentIntensityAnalyzer()
     sia.lexicon.update(new_words)
-    df1 = tRH.ReviewHarvester()
+    df1 = RH.ReviewHarvester(GID)
     df2 = df1['Reviews']
 
 
@@ -25,18 +25,16 @@ def SA():
     df1['Neg'] = [sia.polarity_scores(x)['neg'] for x in df2]
     df1['Neu'] = [sia.polarity_scores(x)['neu'] for x in df2]
     df1['Pos'] = [sia.polarity_scores(x)['pos'] for x in df2]
-    print(df1)
+    #print(df1)
     
     CompoundAvg = pd.DataFrame.mean(df1['Compound'])
     NegAvg = pd.DataFrame.mean(df1['Neg'])
     NeuAvg = pd.DataFrame.mean(df1['Neu'])
     PosAvg = pd.DataFrame.mean(df1['Pos'])
 
-    print(CompoundAvg)
+    return(df1, CompoundAvg)
     
-    return(df1)
+    #return(df1)
 
 if __name__ == '__main__':
     sys.exit(main())
-
-SA()
