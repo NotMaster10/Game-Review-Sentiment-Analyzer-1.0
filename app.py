@@ -19,7 +19,7 @@ def about():
 
 @app.route("/help")
 def helpme():
-   return ("help.html")
+   return render_template("help.html")
    
 @app.route("/result", methods = ['POST'])
 def result():

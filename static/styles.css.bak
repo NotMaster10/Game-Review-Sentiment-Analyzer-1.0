@@ -1,0 +1,127 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 100%;
+}
+ul{ 
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+	text-align: center;
+	list-style:none;
+} 
+ol{ 
+    margin-left: 30px;
+    padding-left:10px; 
+}
+
+#header {
+ color: #778899;
+ width: 98%;
+ float: center;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 45px;
+ margin: 10px 0px 10px 0px;
+ background-color:#F3F2ED;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background:#F6F0E0;
+ margin: 5px 5px 5px 20px;
+ padding: 10px;
+ height: 350px;
+ width: 30%;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background:#CCC8B3;
+ margin: 5px 5px 5px 5px;
+ padding: 10px;
+ height: 350px;
+ width: 30%;
+ display: inline;
+}
+#contenthelp { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background:#CCC8B3;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 750px;
+ width: 100%;
+ display: inline;
+ line-height: 1.5;
+}
+#rightcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background:#F6F0E0;
+ margin: 5px 5px 10px 5px;
+ padding: 10px;
+ height: 350px;
+ width: 30%;
+ float: left;
+ text-align: center; 
+}
+#aboutmain {
+ height: 300px;	
+}
+
+#footer { 
+ width: 98.5%;
+ clear: both;
+ color: #333;
+ float: center; 
+ border: 1px solid #ccc;
+ background-color:#F3F2ED;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+ height: 50px;
+ text-align: center; 
+}
+
+summary{
+margin-top: 330px;
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 0px;
+background-color: #607d8bdb;
+text-align: center;
+}
+
+Game{
+background-color: #607D8B;
+width: 50%;
+position: absolute;
+height: 150px;
+}
+Results{
+width: 50%;
+background-color: #607d8bc7;
+position: absolute;
+top: 368px;
+height: 150px;
+}
+Picturegame{
+background-color: #607d8bde;
+width: 46%;
+position: absolute;
+left: 52%;
+height: 295px;
+}
+h2 , p {
+text-align: center;
+color: #fff;
+}

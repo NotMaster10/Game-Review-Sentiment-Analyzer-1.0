@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Sentiment Analyis </title>
+<title> Game Review Sentiment Analyzer 1.0 </title>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="{{ url_for('static', filename='first.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
 <header style = "height: 100px; width: 100%; background-color: #607D8B;" >
-<h1 style=" color: #fff; text-align: center; padding-top: 25px; font-size: 30px;" > Sentiment Analysis </h1>
+<h1 style=" color: #fff; text-align: center; padding-top: 25px; font-size: 30px;" > Game Review Sentiment Analyzer 1.0 </h1>
 </header>
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
 <li> <a href = "home"> Home </a> </li>
 <li> <a href = "about"> About </a> </li>
-<li> <a href = "help"> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
-<li>         <form method="POST" class="form" action = "/result">
-             <label for ="URL">Enter Game URL:</label>
-             <input type="text" name="url" id ="url">
-            <input type="submit" name="submit" id="btn" class="file_submit">
-        </form> </li>
 </ul>
 </nav>
 
-<div class = "main">
-<Game>
-<h2> Game </h2>
-<p> GameID, GameName </p>
-</Game>
-<Results>
-<h2> Sentiment Score</h2>
-<p> Show Results </p>
-</Results>
+<div id="contenthelp"> 
+<dl style="text-align:center">
+<dd>Game-Review-Sentiment-Analyzer-1.0</dd>
+<dd>August-December 2021</dd>
+<dd>Created Using Python 3.10</dd> 
+</dl>
+<h3 style="margin-top:1.5em">How To Run the Program From PowerShell (Windows):</h3>
 
-<picturegame>
- <iframe width="595" height="295" src="https://cdn.cloudflare.steamstatic.com/steam/apps/256858858/movie480_vp9.webm?t=1636060576" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-</picturegame>
+<ol>
+<li>https://www.python.org/downloads/ Install Python version 3.10</li>
+<li>In start menu, type powershell.</li>
+<li>Open Powershell.</li>
+<li><dl><dt>Install the required modules using the pip install cmdlets: </dt>
+	<dd>  - pip install flask</dd>
+	<dd>  - pip install pandas</li>
+	<dd>  - pip install vaderSentiment</dd>
+	<dd>  - pip install requests</dd></dl> 
+	</li>
+<li>Download the program files from Github.</li>
+<li>Place the folder containing GRSA 1.0 files where you want it to stay.</li>
+<li>Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".</li>
+<li>Copy the "Location" field from this file.</li>
+<li>In Powershell type "Python /app.py"</li>
+<li>Hit Enter to run the program.</li>
+<li>In your browser type "localhost:5001" to access the User Interface.</li>
+<li>Copy/paste the URL from the game you're intersted in from the Valve store website into the URL field of the GRSA user interface.</li>
+<li>Click Submit</li>
+</ol>
+
+
+  <p style="margin-top:3em">  <b>References:</b> <dl>
+""" Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014. """ </div>
+</p>
 </div>
 
 <summary>

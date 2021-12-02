@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Sentiment Analyis </title>
+<title> Game Review Sentiment Analyzer 1.0 </title>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="{{ url_for('static', filename='first.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
 <header style = "height: 100px; width: 100%; background-color: #607D8B;" >
-<h1 style=" color: #fff; text-align: center; padding-top: 25px; font-size: 30px;" > Sentiment Analysis </h1>
+<h1 style=" color: #fff; text-align: center; padding-top: 25px; font-size: 30px;" > Game Review Sentiment Analyzer 1.0 </h1>
 </header>
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
 <li> <a href = "home"> Home </a> </li>
-<li> <a href = "about"> About </a> </li>
 <li> <a href = "help"> Help </a> </li>
-<li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
-<li>         <form method="POST" class="form" action = "/result">
-             <label for ="URL">Enter Game URL:</label>
-             <input type="text" name="url" id ="url">
-            <input type="submit" name="submit" id="btn" class="file_submit">
-        </form> </li>
+<li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a></li>
 </ul>
 </nav>
 
-<div class = "main">
-<Game>
-<h2> Game </h2>
-<p> GameID, GameName </p>
-</Game>
-<Results>
-<h2> Sentiment Score</h2>
-<p> Show Results </p>
-</Results>
+<div id="aboutmain">
+<div id="leftcolumn"> <b>Sentiment Analysis:</b> A term that refers to the use of natural language processing, text analysis, 
+and computational linguistics in order to ascertain the attitude of a speaker or writer toward a specific topic. Basically, 
+it helps to determine whether a text is expressing sentiments that are positive, negative, or neutral. Sentiment analysis 
+is an excellent way to discover how people, particularly consumers, feel about a particular topic, product, or idea. 
+The origin of sentiment analysis can be traced to the 1950s, when sentiment analysis was primarily used on written paper documents. 
+Today, however, sentiment analysis is widely used to mine subjective information from content on the Internet, including texts, 
+tweets, blogs, social media, news articles, reviews, and comments. This is done using a variety of different techniques, 
+including NLP, statistics, and machine learning methods. Organizations then use the information mined to identify new 
+opportunities and better target their message toward their target demographics. </div>
 
-<picturegame>
- <iframe width="595" height="295" src="https://cdn.cloudflare.steamstatic.com/steam/apps/256858858/movie480_vp9.webm?t=1636060576" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-</picturegame>
+<div id="content"> This project is a web application for e-commerce to assist consumers in learning
+more about games and determining whether it is the appropriate fit for them. We use a 
+database of sentiment-based keywords along with positivity or negativity weight in database and 
+then based on these sentiment keywords mined in  user comment is ranked. We think that 
+numerous perspectives are better than one, and that opinions must be scored. 
+There are other Sentiment Analysis applications. However what makes this application unique is the integration 
+with an original dictionary of weighted words that are used in the gamming environment, adding specific terms to calculate the scoring gives as a 
+result a most accurate sentiment analysis. </div>
+
+<div id="rightcolumn"> <img src="..\static\SentimentAnalysis.png" alt="Sentiment Analysis" width="150" height="350" position="center" > </div>
 </div>
 
 <summary>
@@ -49,5 +50,7 @@
 <h3 style = " color: #fff; text-align: center; padding-top: 10px; font-size: 25px; " >ITM 4900 (E90)</h3>
 <p> © Copyright (2021) </p>
 </footer>
+</div>
+
 </body>
 </html>
