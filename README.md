@@ -11,10 +11,10 @@ How To Run the Program From PowerShell(Windows):
 2. In start menu, type powershell.
 3. Open Powershell.
 4. Install the required modules using the pip install cmdlets:
-	pip install flask
-	pip install pandas
-	pip install vaderSentiment
-	pip install requests
+	"pip install flask"
+	"pip install pandas"
+	"pip install vaderSentiment"
+	"pip install requests"
 5. Download the program files from Github. 
 6. Place the folder containing GRSA 1.0 files where you want it to stay.
 7. Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".

@@ -2,6 +2,7 @@
 # August-December 2021 
 # 
 # Created Using Python 3.10
+# Flask, NLTK, vaderSentiment, pandas, 
 
 
 How To Run the Program From PowerShell(Windows):
@@ -27,23 +28,30 @@ How To Run the Program From PowerShell(Windows):
 
 
 FAQs:
+
 1. How did we score the user sentiments: 
 The overall sentiment score we translated into a 1-10 numbered scale modeled after the scoring system used by destructoid.com 
 reviewers found here: https://www.destructoid.com/the-official-destructoid-review-guide/. Our translated scale is as follows:
-	1 Failure: This game was created with no depth and no talent.
-	2 Bad: Any good this game had is quickly swallowed up by a plethora of issues.
-	3 Poor: Somewhere this game went wrong. The original idea might have had promise, but in practice it failed.
-	4 Below Average: This game may have its high points but they soon give way to its glaring faults.
-	5 Mediocre: This game is an excercise in apathy. Neither hot nor cold. Simply medicore.
-	6 It's okay: This game is slightly above average, or else just inoffensive.
-	7 Good: There could be some irritating faults to the game, but overall it's fun to play.
-	8 Great: Game devs made an impressive effort. The game has few noticable problems. It may not be everyone's cup of tea, but many will enjoy it.
-	9 Superb: This game is the hallmark of excellence. It might have a few flaws but they are negligable.
-	10 Flawless: This game is as perfect as you can get in its given genre.
+
+	Score				Description
+	1 Failure: 			This game was created with no depth and no talent.
+	2 Bad: 				Any good this game had is quickly swallowed up by a plethora of issues.
+	3 Poor: 			Somewhere this game went wrong. The original idea might have had promise, but in practice it failed.
+	4 Below Average: 	This game may have its high points but they soon give way to its glaring faults.
+	5 Mediocre: 		This game is an excercise in apathy. Neither hot nor cold. Simply medicore.
+	6 It's okay: 		This game is slightly above average, or else just inoffensive.
+	7 Good: 			There could be some irritating faults to the game, but overall it's fun to play.
+	8 Great: 			Game devs made an impressive effort. The game has few noticable problems. It may not be everyone's cup of tea, but many will enjoy it.
+	9 Superb: 			This game is the hallmark of excellence. It might have a few flaws but they are negligable.
+	10 Flawless: 		This game is as perfect as you can get in its given genre.
 
 2. What is natural language processing?
 
 3. How does this project use NLTK differently?
+
+4. What is a lexicon?
+
+5. 
 
 
 References:
