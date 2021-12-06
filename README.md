@@ -10,7 +10,7 @@ How To Run the Program From PowerShell(Windows):
 1. https://www.python.org/downloads/ Install Python version 3.10
 2. In start menu, type powershell.
 3. Open Powershell.
-4. Install the required modules using the pip install cmdlets:
+4. Install the required modules using the Powershell cmdlets:
 	"pip install flask"
 	"pip install pandas"
 	"pip install vaderSentiment"
