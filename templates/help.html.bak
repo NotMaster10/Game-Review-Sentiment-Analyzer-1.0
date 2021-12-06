@@ -13,8 +13,8 @@
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
-<li> <a href = "home"> Home </a> </li>
-<li> <a href = "about"> About </a> </li>
+<li> <a href = {{url_for("home")}}> Home </a> </li>
+<li> <a href = {{url_for("about.html")}}> About </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
 </ul>
 </nav>
@@ -28,14 +28,14 @@
 <h3 style="margin-top:1.5em">How To Run the Program From PowerShell (Windows):</h3>
 
 <ol>
-<li>https://www.python.org/downloads/ Install Python version 3.10</li>
+<li><a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a> Install Python version 3.10</li>
 <li>In start menu, type powershell.</li>
 <li>Open Powershell.</li>
 <li><dl><dt>Install the required modules using the pip install cmdlets: </dt>
-	<dd> - pip install flask</dd>
-	<dd> - pip install pandas</li>
-	<dd> - pip install vaderSentiment</dd>
-	<dd> - pip install requests</dd></dl> 
+	<dd>  - pip install flask</dd>
+	<dd>  - pip install pandas</li>
+	<dd>  - pip install vaderSentiment</dd>
+	<dd>  - pip install requests</dd></dl> 
 	</li>
 <li>Download the program files from Github.</li>
 <li>Place the folder containing GRSA 1.0 files where you want it to stay.</li>

@@ -19,7 +19,6 @@ ol{
     margin-left: 30px;
     padding-left:10px; 
 }
-
 #header {
  color: #778899;
  width: 98%;
@@ -75,7 +74,7 @@ ol{
  text-align: center; 
 }
 #aboutmain {
- height: 300px;	
+ height: 310px;	
 }
 
 #footer { 

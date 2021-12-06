@@ -19,7 +19,9 @@ ol{
     margin-left: 30px;
     padding-left:10px; 
 }
-
+nav{
+	height: 20px;
+}
 #header {
  color: #778899;
  width: 98%;

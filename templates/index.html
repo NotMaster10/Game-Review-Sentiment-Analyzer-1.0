@@ -15,7 +15,7 @@
 <ul>
 <li> <a href = "home"> Home </a> </li>
 <li> <a href = "about"> About </a> </li>
-<li> <a href = "help"> Help </a> </li>
+<li> <a href = "helpme"> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
 <li>         <form method="POST" class="form" action = "/result">
              <label for ="URL">Enter Game URL:</label>
@@ -29,17 +29,17 @@
 <Game>
 <h2> Game Information </h2>
 <p> {{ GameName }} </p>
-<p> Steam Game ID: {{ GameID }} </p>
 </Game>
 
 <Results>
-<h2> Sentiment Score </h2>
+<h2> Overall User Sentiments </h2>
 <p> {{ Score }} </p>
+<P> {{ ScoreText }} </p>
 
 </Results>
 
 <picturegame>
- <iframe width="595" height="295" src="https://cdn.cloudflare.steamstatic.com/steam/apps/256858858/movie480_vp9.webm?t=1636060576" frameborder="0" allowfullscreen></iframe>
+ <iframe width="595" height="295" src={{GameData}} frameborder="0" allowfullscreen></iframe>
       </iframe>
 </picturegame>
 </div>

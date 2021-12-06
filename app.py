@@ -1,17 +1,16 @@
 from flask import Flask, render_template, request
 import SentimentAnalyzer as SA
 import pandas as pd
+import game_data as gd
 
 app = Flask(__name__)
-#output = ""
-#GameName = 'Game Name'
-#ID = 'Steam Game ID'
-#Score = 0
+
 
 @app.route("/")
 @app.route("/home")
 def home():
-   return render_template("index.html")
+   Gamedata = gd.GameData("NLTK")
+   return render_template("index.html", GameData=Gamedata)
 
 @app.route("/about")
 def about():
@@ -20,30 +19,96 @@ def about():
 @app.route("/help")
 def helpme():
    return render_template("help.html")
-   
+
+    
 @app.route("/result", methods = ['POST'])
 def result():
     output = request.form['url']
-    print(output)
-    #Set variables GameName and ID
-    GameName = (output.split('/')[-2])
-    ID = (output.split('/')[-3])
-    print(ID, GameName)
+    #print(output)
+    try:
+        GameName = (output.split('/')[-2])
+        ID = (output.split('/')[-3])
+    except IndexError:
+        return render_template("error.html")
+    #print(ID, GameName)
     
     feedback = SA.SA(ID)
-    
     CompoundAvg = pd.DataFrame.mean(feedback['Compound'])
-    #NegAvg = pd.DataFrame.mean(feedback['Neg'])
-    #NeuAvg = pd.DataFrame.mean(feedback['Neu'])
-    #PosAvg = pd.DataFrame.mean(feedback['Pos'])
     
-    #print(feedback)
+    def textScore ():
+        Description = ""
+        if -1.0 < CompoundAvg and -0.8 >= CompoundAvg:
+            TextScore = "1  Failure"
+            return TextScore
+        elif -0.8 < CompoundAvg and -0.6 >= CompoundAvg:
+            TextScore = "2  Bad"
+            return TextScore
+        elif -0.6 < CompoundAvg and -0.4 >= CompoundAvg:
+            TextScore = "3  Poor"
+            return TextScore
+        elif -0.4 < CompoundAvg and -0.2 >= CompoundAvg:
+            TextScore = "4  Below Average"
+            return TextScore
+        elif -0.2 < CompoundAvg and 0.0 >= CompoundAvg:
+            TextScore = "5  Mediocre"
+            return TextScore
+        elif 0.0 < CompoundAvg and 0.2 >= CompoundAvg:
+            TextScore = "6  It's okay"
+            return TextScore
+        elif 0.2 < CompoundAvg and 0.4 >= CompoundAvg:
+            TextScore = "7  Good"
+            return TextScore
+        elif 0.4 < CompoundAvg and 0.6 >= CompoundAvg:
+            TextScore = "8  Great"
+            return TextScore
+        elif 0.6 < CompoundAvg and 0.8 >= CompoundAvg:
+            TextScore = "9  Superb"
+            return TextScore
+        elif 0.8 < CompoundAvg and 1.0 >= CompoundAvg:
+            TextScore = "10  Flawless"
+            return TextScore
+    TextScore = textScore()    
 
-    '''Here we need to only run the SA, have those results input into a new HTML
-    then we can render the new HTML as results.'''
-    return render_template('index.html', GameName=GameName, GameID=ID, Score=CompoundAvg)
+    def scoreDescription ():
+        Description = ""
+        if TextScore == "1  Failure":
+            Description = "This game was created with no depth and no talent."
+            return Description
+        elif TextScore == "2  Bad":
+            Description = "Any good this game had is quickly swallowed up by a plethora of issues."
+            return Description 
+        elif TextScore == "3  Poor":
+            Description = "Somewhere this game went wrong. The original idea might have had promise, but in practice it failed."
+            return Description
+        elif TextScore == "4  Below Average":
+            Description = "This game may have its high points but they soon give way to its glaring faults."
+            return Description
+        elif TextScore == "5  Mediocre":
+            Description = "This game is an excercise in apathy. Neither hot nor cold. Simply mediocre."
+            return Description
+        elif TextScore == "6  It's okay":
+            Description = "This game is slightly above average, or else just inoffensive."
+            return Description
+        elif TextScore == "7  Good":
+            Description = "There could be some irritating faults to the game, but overall it's fun to play."
+            return Description
+        elif TextScore == "8  Great":
+            Description = "Game devs made an impressive effort. The game has few noticable problems. It may not everyone's cup of tea, but many will enjoy it."
+            return Description
+        elif TextScore == "9  Superb":
+            Description = "This game is the hallmark of excellence. It migh have a few flaws but they are negligable."
+            return Description
+        elif TextScore == "10  Flawless":
+            Description = "This game is as perfect as you can get in its given genre."
+            return Description
+    Description = scoreDescription()
+    #Attempt to grab GameNews using API
+    Gamedata = gd.GameData(GameName)
+    print(Gamedata)
+    return render_template('index.html', GameName=GameName, Score=TextScore, ScoreText=Description, GameData=Gamedata)
+   
+   
     #export = For URL/GameID add Analysis() to database
-
     #Pull Game ID output from database
     
 if __name__ == '__main__':

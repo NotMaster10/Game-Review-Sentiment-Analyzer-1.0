@@ -3,7 +3,7 @@
 <head>
 <title> Game Review Sentiment Analyzer 1.0 </title>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="{{ url_for('static', filename='first.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
@@ -13,35 +13,21 @@
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
-<li> <a href = "home"> Home </a> </li>
-<li> <a href = "about"> About </a> </li>
-<li> <a href = "help"> Help </a> </li>
+<li> <a href = {{url_for("home")}}> Home </a> </li>
+<li> <a href = {{url_for("helpme")}}> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
-<li>         <form method="POST" class="form" action = "/result">
-             <label for ="URL">Enter Game URL:</label>
-             <input type="text" name="url" id ="url">
-            <input type="submit" name="submit" id="btn" class="file_submit">
-        </form> </li>
 </ul>
 </nav>
 
-<div class = "main">
-<Game>
-<h2> Game Information </h2>
-<p> {{ GameName }} </p>
-</Game>
+<div id="contenthelp"> 
+<dl style="text-align:center">
+<dd>Game-Review-Sentiment-Analyzer-1.0</dd>
+<dd>August-December 2021</dd>
+<dd>Created Using Python 3.10</dd> 
+</dl>
 
-<Results>
-<h2> Overall User Sentiments </h2>
-<p> {{ Score }} </p>
-<P> {{ ScoreText }} </p>
+<h1 style="margin-top:1.5em"> This URL is not valid. Please try another. </h1>
 
-</Results>
-
-<picturegame>
- <iframe width="595" height="295" src={{GameData}} frameborder="0" allowfullscreen></iframe>
-      </iframe>
-</picturegame>
 </div>
 
 <summary>

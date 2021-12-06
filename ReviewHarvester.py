@@ -15,8 +15,7 @@ def ReviewHarvester(GameID):
     
     '''Return an error code if request unsuccessful'''
     if response.status_code != 200: 
-        print('Status:', response.status_code, 'Problem with the request. Exiting.')
-        exit()
+        return('Status:', response.status_code, 'Problem with the request. Exiting.')
     
     '''Pulling only the reviews and reviewIDs from the information'''
     data = response.json()
