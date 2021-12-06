@@ -1,31 +1,36 @@
 # Game-Review-Sentiment-Analyzer-1.0
 # August-December 2021 
-# 
 # Created Using Python 3.10
 # Flask, NLTK, vaderSentiment, pandas, 
 
 
-How To Run the Program From PowerShell(Windows):
+How To Run GRSA 1.0 From PowerShell(Windows):
 
-1. https://www.python.org/downloads/ Install Python version 3.10
-2. In start menu, type powershell.
-3. Open Powershell.
-4. Install the required modules using the Powershell cmdlets:
-   - "pip install flask"
-   - "pip install pandas"
-   - "pip install vaderSentiment"
-   - "pip install requests"
-5. Download the program files from Github. 
-6. Place the folder containing GRSA 1.0 files where you want it to stay.
-7. Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".
-8. Copy the "Location" field from this file.
-9. In Powershell type "Python " <-- Don't forget to add the space after "Python". 
-10. Press ctrl+v to add program location.
-11. Type "\app.py" after the program location.
-12. Hit Enter to run the program.
-13. In your browser type "localhost:5001" to access the User Interface.
-14. Copy/paste the URL from the game you're interested in from the Valve store website: https://store.steampowered.com/ into the URL field of the GRSA user interface.
-15. Click Submit.
+1. Preparing your environment.
+   - https://www.python.org/downloads/ Install Python version 3.10
+   - In start menu, type powershell.
+   - Open Powershell.
+   - Install the required modules using the Powershell cmdlets:
+     - "pip install flask"
+     - "pip install pandas"
+     - "pip install vaderSentiment"
+     - "pip install requests"
+2. Download the program files from Github. 
+   - Click on the green "Code" button and selecting "Download ZIP". 
+   - Place the folder containing GRSA 1.0 files where you want it to be housed on your computer.
+   - Right-click on the zipped folder and select "Extract All". Click "Extract".
+   - If you get an error or don't see the Extract option, you may need to install 7zip: https://www.7-zip.org/.
+3. Start the program:
+   - Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".
+   - Copy the "Location" field from this file.
+   - In Powershell type "Python " <-- Don't forget to add the space after "Python". 
+   - Press ctrl+v to add program location.
+   - Type "\app.py" after the program location.
+   - Hit Enter to run the program.
+4. Using GRSA 1.0 
+   - In your browser type "localhost:5001" to access the User Interface.
+   - Copy/paste the URL from the game you're interested in from the Valve store website: https://store.steampowered.com/ into the URL field of the GRSA user interface.
+   - Click Submit.
 
 
 
