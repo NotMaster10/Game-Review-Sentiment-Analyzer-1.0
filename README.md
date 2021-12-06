@@ -22,7 +22,7 @@ How To Run the Program From PowerShell(Windows):
 9. In Powershell type "Python paste file location here with ctrl+v\app.py"
 10. Hit Enter to run the program.
 11. In your browser type "localhost:5001" to access the User Interface.
-12. Copy/paste the URL from the game you're intersted in from the Valve store website into the URL field of the GRSA user interface.
+12. Copy/paste the URL from the game you're intersted in from the Valve store website: https://store.steampowered.com/ into the URL field of the GRSA user interface.
 13. Click Submit.
 
 
