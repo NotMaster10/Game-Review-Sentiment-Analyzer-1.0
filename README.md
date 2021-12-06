@@ -19,7 +19,7 @@ How To Run the Program From PowerShell(Windows):
 6. Place the folder containing GRSA 1.0 files where you want it to stay.
 7. Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".
 8. Copy the "Location" field from this file.
-9. In Powershell type "Python" 
+9. In Powershell type "Python " <-- Don't forget to add the space after "Python". 
 10. Press ctrl+v to add program location.
 11. Type "\app.py" after the program location.
 12. Hit Enter to run the program.
