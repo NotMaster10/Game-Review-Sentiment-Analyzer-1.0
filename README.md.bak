@@ -4,7 +4,7 @@
 # Flask, NLTK, vaderSentiment, pandas, 
 
 
-How To Run the Program From PowerShell(Windows):
+How To Run GRSA 1.0 From PowerShell(Windows):
 
 1. Preparing your environment.
    - https://www.python.org/downloads/ Install Python version 3.10
@@ -21,8 +21,8 @@ How To Run the Program From PowerShell(Windows):
    - Right-click on the zipped folder and select "Extract All". Click "Extract".
    - If you get an error or don't see the Extract option, you may need to install 7zip: https://www.7-zip.org/.
 3. Start the program:
-   - Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".
-   - Copy the "Location" field from this file.
+   - Select the app.py file in the GRSA 1.0 folder on your desktop. Right-click and open "properties".
+   - Copy the "Location" field from this properties information.
    - In Powershell type "Python " <-- Don't forget to add the space after "Python". 
    - Press ctrl+v to add program location.
    - Type "\app.py" after the program location.

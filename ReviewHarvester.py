@@ -28,8 +28,9 @@ def ReviewHarvester(GameID):
         reviews.append(review)
         reviewID = (fields['recommendationid'])
         reviewIDs.append(reviewID)
-    df = pd.DataFrame({'IDs': reviewIDs, 'Reviews': reviews})
-    return(df)
+        df = pd.DataFrame({'IDs': reviewIDs, 'Reviews': reviews})
+        return(df)
+
         
 if __name__ == '__main__':
     sys.exit(main())

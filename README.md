@@ -21,8 +21,8 @@ How To Run GRSA 1.0 From PowerShell(Windows):
    - Right-click on the zipped folder and select "Extract All". Click "Extract".
    - If you get an error or don't see the Extract option, you may need to install 7zip: https://www.7-zip.org/.
 3. Start the program:
-   - Select the app.py file in the GRSA 1.0 folder. Right-click and open "properties".
-   - Copy the "Location" field from this file.
+   - Select the app.py file in the GRSA 1.0 folder on your desktop. Right-click and open "properties".
+   - Copy the "Location" field from this properties information.
    - In Powershell type "Python " <-- Don't forget to add the space after "Python". 
    - Press ctrl+v to add program location.
    - Type "\app.py" after the program location.
@@ -41,7 +41,7 @@ The overall sentiment score we translated into a 1-10 numbered scale modeled aft
 reviewers found here: https://www.destructoid.com/the-official-destructoid-review-guide/. Our translated scale is as follows:
 
    - Score				Description
-   - 1 Failure: 		This game was created with no depth and no talent.
+   - 1 Failure: 		This game was created with or requires no depth and no talent.
    - 2 Bad: 			Any good this game had is quickly swallowed up by a plethora of issues.
    - 3 Poor: 			Somewhere this game went wrong. The original idea might have had promise, but in practice it failed.
    - 4 Below Average: 	This game may have its high points but they soon give way to its glaring faults.

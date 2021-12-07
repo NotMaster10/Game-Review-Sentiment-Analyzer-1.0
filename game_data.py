@@ -4,7 +4,6 @@ import random
 
 def GameData(Name):
 
-    #Name = input("What is your search?")
     html = urlreq.urlopen(f"https://www.youtube.com/results?search_query={Name}")
     video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
     vidID = random.choice(video_ids)

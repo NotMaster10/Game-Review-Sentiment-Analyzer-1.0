@@ -17,19 +17,15 @@ def SA(GID):
 
     sia = SentimentIntensityAnalyzer()
     sia.lexicon.update(new_words)
+    
     df1 = RH.ReviewHarvester(GID)
     df2 = df1['Reviews']
-
-
+    
     df1['Compound'] = [sia.polarity_scores(x)['compound'] for x in df2]
     df1['Neg'] = [sia.polarity_scores(x)['neg'] for x in df2]
     df1['Neu'] = [sia.polarity_scores(x)['neu'] for x in df2]
     df1['Pos'] = [sia.polarity_scores(x)['pos'] for x in df2]
-    #print(df1)
-
-    return(df1)
-    
-    #return(df1)
+    return(df1) 
 
 if __name__ == '__main__':
     sys.exit(main())
