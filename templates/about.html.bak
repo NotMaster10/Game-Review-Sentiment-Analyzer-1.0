@@ -13,13 +13,13 @@
 
 <nav style = "background-color: #607d8b9c;" >
 <ul>
-<li> <a href = {{url_for ("home")}}> Home </a> </li>
-<li> <a href = {{url_for("helpme")}}> Help </a> </li>
+<li> <a href = "home"> Home </a> </li>
+<li> <a href = "help"> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a></li>
 </ul>
 </nav>
 
-<div id="aboutmain">
+<div id="about main">
 <div id="leftcolumn"> <b>Sentiment Analysis:</b> A term that refers to the use of natural language processing, text analysis, 
 and computational linguistics in order to ascertain the attitude of a speaker or writer toward a specific topic. Basically, 
 it helps to determine whether a text is expressing sentiments that are positive, negative, or neutral. Sentiment analysis 
@@ -29,14 +29,6 @@ Today, however, sentiment analysis is widely used to mine subjective information
 tweets, blogs, social media, news articles, reviews, and comments. This is done using a variety of different techniques, 
 including NLP, statistics, and machine learning methods. Organizations then use the information mined to identify new 
 opportunities and better target their message toward their target demographics. </div>
-
-<div id="leftcolumn"> <b>Sentiment Scoring:</b> The overall sentiment score we translated into a 1-10 numbered scale modeled after the scoring system used by destructoid.com 
-reviewers found here: <a href = "https://www.destructoid.com/the-official-destructoid-review-guide/">https://www.destructoid.com/the-official-destructoid-review-guide/</a>. 
-Our translated scale is as follows:
-<ul>
-
-</ul>
-</div>
 
 <div id="content"> This project is a web application for e-commerce to assist consumers in learning
 more about games and determining whether it is the appropriate fit for them. We use a 
