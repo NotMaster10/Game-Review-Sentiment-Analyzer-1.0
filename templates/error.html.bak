@@ -14,7 +14,7 @@
 <nav style = "background-color: #607d8b9c;" >
 <ul>
 <li> <a href = {{url_for("home")}}> Home </a> </li>
-<li> <a href = {{url_for("help")}}> Help </a> </li>
+<li> <a href = {{url_for("helpme")}}> Help </a> </li>
 <li> <a href = "https://github.com/NotMaster10/Game-Review-Sentiment-Analyzer-1.0" target="_blank"> GitHub Repository </a> </li>
 </ul>
 </nav>

@@ -90,27 +90,28 @@ def scoreDescription (tScore):
 def result():
     output = request.form['url']
     
-    # Trying to rule out bad urls, but it's not.
-    if "steampowered" in output == False:
-        print("False")
-        return render_template("error.html")
-    else:
-        try:
-            GameName = (output.split('/')[-2])
-            ID = (output.split('/')[-3])
+    # Exceptions ruling out bad URL input here
+    try:
+        GameName = (output.split('/')[-2])
+        ID = (output.split('/')[-3])
         
-            outputName = GameName.replace("_", " ")
-            
+        outputName = GameName.replace("_", " ")
+        
+        try:
             feedback = SA.SA(ID)
             CompoundAvg = pd.DataFrame.mean(feedback['Compound'])
+            
             #Here is main output creation for page.
             TextScore = textScore(CompoundAvg)    
             Description = scoreDescription(TextScore)
             Gamedata = gd.GameData(GameName)
             return render_template('index.html', GameName=outputName, Score=TextScore, ScoreText=Description, GameData=Gamedata)
+        
+        except KeyError:
+            return render_template("error.html", Error = "This is not a valid URL. Please try another.")
     
-        except IndexError:
-            return render_template("error.html")
+    except Exception as e:
+        return render_template("error.html", Error = e)
 
     
     #export = For URL/GameID add Analysis() to database
