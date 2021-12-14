@@ -1,5 +1,5 @@
-'''VG_lexicon_builder
-12/08/21
+'''VG_lexicon_builder 1.1
+12/09/21
 Hannah Tonce'''
 
 import requests
@@ -23,9 +23,10 @@ data = response.json()
 reviews = []
 with open('lexicon.txt', 'rb') as file:
     lexicon = pickle.load(file)
-    #print(lexicon)
+
     field_list = data['reviews']
     for fields in field_list:
+        
         if fields['voted_up'] == True:
             review = tokenizer.tokenize(fields['review'])
    
